@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#31363E"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp">
+
+            <ImageView
+                android:id="@+id/image_card_food"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/burg" />
+
+            <TextView
+                android:id="@+id/name_card_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:text="Meat Burger"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/delete"
+                app:layout_constraintStart_toEndOf="@+id/image_card_food"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_card_order"
+                app:layout_constraintEnd_toStartOf="@+id/rate_card_order"
+                app:layout_constraintStart_toStartOf="@+id/name_card_order"
+                app:layout_constraintTop_toTopOf="@+id/rate_card_order"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/rate_card_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="4.8"
+                android:textColor="#fff"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/name_card_order" />
+
+            <ImageView
+                android:id="@+id/photocardlocation"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_card_order"
+                app:layout_constraintStart_toEndOf="@+id/rate_card_order"
+                app:layout_constraintTop_toTopOf="@+id/rate_card_order"
+                app:srcCompat="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/card_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="300"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="@+id/photocardlocation"
+                app:layout_constraintStart_toEndOf="@+id/photocardlocation"
+                app:layout_constraintTop_toTopOf="@+id/photocardlocation" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m"
+                android:textColor="#fff"
+                app:layout_constraintStart_toEndOf="@+id/card_location"
+                app:layout_constraintTop_toTopOf="@+id/card_location" />
+
+            <TextView
+                android:id="@+id/card_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:text="0.0"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/photocardlocation"
+                app:layout_constraintStart_toStartOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:text="$"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="@+id/card_price"
+                app:layout_constraintStart_toEndOf="@+id/card_price"
+                app:layout_constraintTop_toTopOf="@+id/card_price" />
+
+            <ImageView
+                android:id="@+id/plusbtn"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/card_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_price"
+                app:srcCompat="@drawable/plus" />
+
+            <TextView
+                android:id="@+id/number_card_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/plusbtn"
+                app:layout_constraintEnd_toStartOf="@+id/plusbtn"
+                app:layout_constraintTop_toTopOf="@+id/plusbtn" />
+
+            <ImageView
+                android:id="@+id/minusbtn"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/plusbtn"
+                app:layout_constraintEnd_toStartOf="@+id/number_card_food"
+                app:layout_constraintTop_toTopOf="@+id/plusbtn"
+                app:srcCompat="@drawable/minus" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="8dp"
+                android:tint="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/reject" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
