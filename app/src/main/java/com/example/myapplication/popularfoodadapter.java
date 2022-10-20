@@ -110,7 +110,6 @@ public  class popularfoodadapter extends RecyclerView.Adapter<popularfoodadapter
 
 
                 }
-                dialogs.dismiss();
 
             }
 
