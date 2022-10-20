@@ -63,6 +63,7 @@ public  class popularfoodadapter extends RecyclerView.Adapter<popularfoodadapter
         holder.subname.setText(popularfoods.get(position). getSubname());
         String fee=popularfoods.get(position).getFee().toString();
         holder.pri.setText(fee);
+
         if(!select.contains(position)){
             holder.frameLayout.setBackgroundColor(Color.parseColor("#283140"));
 
@@ -71,17 +72,12 @@ public  class popularfoodadapter extends RecyclerView.Adapter<popularfoodadapter
             holder.frameLayout.setBackgroundColor(Color.parseColor("#0C5EF9"));
 
         }
-        dialogs=new Dialog(context);
-        dialogs.setContentView(R.layout.dialog);
 
-        dialogs.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        dialogs.setCancelable(false);
-        dialogs.getWindow().getAttributes().windowAnimations=R.style.animation;
-        ConstraintLayout submit=dialogs.findViewById(R.id.submit_dialog);
-        TextView cancel=dialogs.findViewById(R.id.cancel_dailog);
-        submit.setOnClickListener(new View.OnClickListener() {
+        holder.add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if (select.contains(position)){
                     boolean sd=db.deletefood(popularfoods.get(position).getName());
                     if(sd==true){
@@ -118,20 +114,8 @@ public  class popularfoodadapter extends RecyclerView.Adapter<popularfoodadapter
 
             }
 
-        });
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialogs.dismiss();
-            }
-        });
-        holder.add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialogs.show();
 
 
-            }
         });
         if(!select2.contains(position)){
             holder.love.setImageTintList(ColorStateList.valueOf(Color.rgb(81, 86, 98)));
